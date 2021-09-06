@@ -7,19 +7,19 @@ int main(int argc, char const *argv[])
 
     float preco;
 
-    int soma1;
-    float soma2;
+    int res1;
+    float res2;
 
     idade = 6;
     matricula = 0;
     preco = 2;
 
-    soma1 = idade + preco;
+    res1 = idade - preco;
 
-    soma2 = idade + preco;
+    res2 = idade - preco;
 
-    printf("soma1 = %d\n", soma1);
-    printf("soma2 = %.2f\n", soma2);
+    printf("res1 = %d\n", res1);
+    printf("res2 = %.2f\n", res2);
 
     return 0;
 }
