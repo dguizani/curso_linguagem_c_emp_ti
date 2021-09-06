@@ -10,5 +10,7 @@ int main(int argc, char const *argv[])
 
     scanf("%c %d %f", &var_char, &var_int, &var_float);
 
+    printf("\n%c %d %f", var_char, var_int, var_float);
+
     return 0;
 }
