@@ -12,17 +12,15 @@ int main(int argc, char const *argv[])
 
     idade = 6;
     matricula = 0;
-    preco = 2;
+    preco = 2.5;
 
-    idade--;
+    idade = idade * 5;
 
-    idade = idade - 1;
+    idade *= 5;
 
-    idade -= 1;
+    res1 = idade * preco;
 
-    res1 = idade - preco;
-
-    res2 = idade - preco;
+    res2 = idade * preco;
 
     printf("res1 = %d\n", res1);
     printf("res2 = %.2f\n", res2);
