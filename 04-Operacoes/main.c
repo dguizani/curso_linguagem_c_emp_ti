@@ -14,6 +14,12 @@ int main(int argc, char const *argv[])
     matricula = 0;
     preco = 2;
 
+    idade--;
+
+    idade = idade - 1;
+
+    idade -= 1;
+
     res1 = idade - preco;
 
     res2 = idade - preco;
