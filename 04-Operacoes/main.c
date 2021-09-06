@@ -10,20 +10,17 @@ int main(int argc, char const *argv[])
     int res1;
     float res2;
 
-    idade = 6000;
+    idade = 6003;
     matricula = 0;
     preco = 2.5;
 
-    idade = idade / 5;
+    idade = idade % 5;
 
-    idade /= 5;
+    printf("idade = %d\n", idade);
 
-    res1 = idade / preco;
+    idade %= 5;
 
-    res2 = idade / preco;
-
-    printf("res1 = %d\n", res1);
-    printf("res2 = %.2f\n", res2);
+    printf("idade = %d\n", idade);
 
     return 0;
 }
