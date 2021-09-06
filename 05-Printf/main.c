@@ -2,16 +2,12 @@
 
 int main(int argc, char const *argv[])
 {
-    char var_char = 'C';
-
-    int var_int = 251;
-
-    float var_float = 15.75F;
-
-    printf("var_char   = %c\n\n", var_char);
-    printf("var_int    = '%05d'\n\n", var_int);
-    printf("var_float  = '%10.2f'\n\n", var_float);
-    printf("var_string = '%-*s'\n\n", 30, "uma frase");
+    printf("\n+--------------------------+");
+    printf("\n|%*s%s%*s|", 11, "", "MENU", 11, "");
+    printf("\n+--------------------------+");
+    printf("\n| %d | %-*s |", 1, 20, "Opcao 1");
+    printf("\n| %d | %-*s |", 2, 20, "Opcao 2");
+    printf("\n+--------------------------+");
 
     return 0;
 }
