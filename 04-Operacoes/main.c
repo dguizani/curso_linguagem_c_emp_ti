@@ -7,9 +7,17 @@ int main(int argc, char const *argv[])
 
     float preco;
 
+    idade = 0;
+    matricula = 0;
+    preco = 0;
+
+    idade = idade + 4;
+
+    idade++;
+
+    idade += 2;
+
     printf("idade = %d\n", idade);
-    printf("matricula = %d\n", matricula);
-    printf("preco = %.2f\n", preco);
 
     return 0;
 }
