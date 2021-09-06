@@ -1,3 +1,9 @@
+/*
+    Nome Professor: Beltrano
+    Aluno: Fulano
+    Matrícula: 651561561
+*/
+
 #include <stdio.h>
 
 int main(int argc, char const *argv[])
@@ -5,7 +11,7 @@ int main(int argc, char const *argv[])
     int idade;
     int matricula;
 
-    float preco;
+    float preco; // preço de um produto genérico
 
     int res1;
     float res2;
@@ -16,9 +22,7 @@ int main(int argc, char const *argv[])
     matricula = 0;
     preco = 2.5;
 
-    /* idade = 123123123 */
-
-    printf("idade = %d\n", idade);
+    printf("%d\n", idade);
 
     return 0;
 }
