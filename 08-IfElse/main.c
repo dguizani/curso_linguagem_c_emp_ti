@@ -1,25 +1,21 @@
 #include <stdio.h>
 
-int nivel_0; // não recomendado
-
 int main(int argc, char const *argv[])
 {
-    int nivel_1;
+    //     falso ou false -> 0
+    // verdadeiro ou true -> 1
 
-    {
-        int nivel_2;
+    // E ou AND -> &&
 
-        nivel_1 = 3;
-        nivel_0 = 5;
+    // 1 && 0 -> 0
+    // 0 && 1 -> 0
+    // 0 && 0 -> 0
+    // 1 && 1 -> 1
 
-        {
-            int nivel_3;
-        }
-
-        nivel_3 = 14; // não consigo acessar
-    }
-
-    nivel_2 = 3; // não consigo acessar
+    printf("\n%d", 1 && 0);
+    printf("\n%d", 0 && 1);
+    printf("\n%d", 0 && 0);
+    printf("\n%d", 1 && 1);
     
     return 0;
 }
