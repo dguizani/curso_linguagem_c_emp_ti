@@ -6,7 +6,7 @@ int main(int argc, char const *argv[])
         0 -> Nota 1
         1 -> Nota 2
         2 -> Nota 3
-        3 -> Nota 4
+        3 -> Media Ponderada
     */
     float notas[4];
     
