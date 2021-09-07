@@ -2,16 +2,13 @@
 
 int main(int argc, char const *argv[])
 {
-    char var_char1 = '\n';
-    char var_char2 = 10;
+    int hora, minuto, segundo;
 
-    int var_int;
+    printf("Digite a hora atual (hh:mm:ss): ");
 
-    float var_float;
+    scanf("%d:%d:%d", &hora, &minuto, &segundo);
 
-    scanf(" %c:%c-%f", &var_char1, &var_char2, &var_float);
-
-    printf("'%c' '%c' '%.3f'", var_char1, var_char2, var_float);
+    printf("\n%d:%d:%d\n", hora, minuto, segundo);
 
     return 0;
 }
