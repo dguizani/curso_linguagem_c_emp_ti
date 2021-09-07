@@ -2,13 +2,9 @@
 
 int main(int argc, char const *argv[])
 {
-    float nota_1;
-    float nota_2;
-    float nota_3;
-
-    float notas_aluno[3];
-
-    nota_1 = 6.5;
+    float nota_1 = 6.6;
+    float nota_2 = 8;
+    float nota_3 = 7;
 
     /*
         0 -> primeira posição
@@ -16,9 +12,11 @@ int main(int argc, char const *argv[])
         2 -> terceira posição
     */
 
-    notas_aluno[1] = 8;
-    notas_aluno[0] = 6.6;
-    notas_aluno[2] = 7;
+    float notas_aluno[] = {
+        6.6, // pos 0
+        8,   // pos 1
+        7    // pos 2
+    };
 
     printf("\nMedia das notas: %.2f", (notas_aluno[0] + notas_aluno[1] + notas_aluno[2]) / 3);
 
