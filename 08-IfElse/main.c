@@ -30,9 +30,15 @@ int main(int argc, char const *argv[])
     // 15 < 87 -> 1
     // 10 < 10 -> 0
 
-    printf("\n%d", 15 < 10);
-    printf("\n%d", 15 < 87);
-    printf("\n%d", 10 < 10);
+    // igual a -> "=="
+
+    // 15 == 10 -> 0
+    // 15 == 87 -> 0
+    // 10 == 10 -> 1
+
+    printf("\n%d", 15 == 10);
+    printf("\n%d", 15 == 87);
+    printf("\n%d", 10 == 10);
     
     return 0;
 }
