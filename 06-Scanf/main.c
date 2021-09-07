@@ -2,15 +2,18 @@
 
 int main(int argc, char const *argv[])
 {
-    char var_char;
+    char var_char1;
+    char var_char2;
 
     int var_int;
 
     float var_float;
 
-    scanf("%c %d %f", &var_char, &var_int, &var_float);
+    scanf(" %c", &var_char1);
 
-    printf("\n%c %d %f", var_char, var_int, var_float);
+    scanf(" %c", &var_char2);
+
+    printf("'%c' '%c'", var_char1, var_char2);
 
     return 0;
 }
