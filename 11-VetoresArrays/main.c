@@ -15,32 +15,11 @@ int main(int argc, char const *argv[])
         7  // pos 2
     };
 
-    int frase[] = {
-        'M',
-        'e',
-        'd',
-        'i',
-        'a',
-        ' ',
-        'd',
-        'a',
-        's',
-        ' ',
-        'n',
-        'o',
-        't',
-        'a',
-        's',
-        ':',
-        ' ',
-        '%',
-        'd',
-        '\0'
-    };
+    int frase[] = "Media das notas %d";
     
     notas_aluno[3] = (notas_aluno[0] + notas_aluno[1] + notas_aluno[2]) / 3;
 
-    printf("\nMedia das notas: %d", notas_aluno[3]);
+    printf(frase, notas_aluno[3]);
 
     return 0;
 }
