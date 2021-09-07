@@ -5,14 +5,14 @@ int main(int argc, char const *argv[])
     //      falso ou false -> 0
     // verdadeiro ou true  -> 1
 
-    // E ou AND -> &&
+    // E ou AND -> "&&"
 
     // 1 && 0 -> 0
     // 0 && 1 -> 0
     // 0 && 0 -> 0
     // 1 && 1 -> 1
 
-    // OU ou OR -> ||
+    // OU ou OR -> "||"
 
     // 1 || 0 -> 1
     // 0 || 1 -> 1
@@ -48,9 +48,13 @@ int main(int argc, char const *argv[])
     // 15 <= 87 -> 1
     // 10 <= 10 -> 1
 
-    printf("\n%d", 15 <= 10);
-    printf("\n%d", 15 <= 87);
-    printf("\n%d", 10 <= 10);
+    // negação -> "!"
+
+    // !0 -> 1
+    // !1 -> 0
+
+    printf("\n%d", !0);
+    printf("\n%d", !1);
     
     return 0;
 }
