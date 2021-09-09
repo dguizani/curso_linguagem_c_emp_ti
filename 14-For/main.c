@@ -2,16 +2,30 @@
 
 int main(int argc, char const *argv[])
 {
-    int contador = 0;
+    for (/* inicialização */ ; /* condição */ ; /* incremento */)
+	/* instrução */
 
-    while (contador < 5)
-    {
-        printf("\nDentro do 'WHILE'");
-        contador += 1;
-    }
-
-    for (contador = 0 ; contador < 5 ; contador += 1)
-        printf("\nDentro do 'FOR'");
+    /*
+        primeira vez:
+            01 -> inicialização
+            02 -> condição
+            03 -> instrução
+            04 -> incremento
+        
+        segunda vez em diante:
+            05 -> condição
+            06 -> instrução
+            07 -> incremento
+            08 -> condição
+            09 -> instrução
+            10 -> incremento
+            11 -> condição
+            12 -> instrução
+            13 -> incremento
+            .
+            .
+            .
+    */
 
     return 0;
 }
