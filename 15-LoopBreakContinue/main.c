@@ -4,7 +4,7 @@ int main(int argc, char const *argv[])
 {
     char opcao;
 
-    while (!(opcao == '6'))
+    do
     {
         printf("\n+--------------------------+");
         printf("\n|%*s%s%*s|", 11, "", "MENU", 11, "");
@@ -39,7 +39,7 @@ int main(int argc, char const *argv[])
         
         else
             printf("\nOpcao Invalida");
-    }
+    } while (!(opcao == '6'));
 
     
     return 0;
