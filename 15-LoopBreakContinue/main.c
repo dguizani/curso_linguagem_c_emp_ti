@@ -4,7 +4,7 @@ int main(int argc, char const *argv[])
 {
     char opcao;
 
-    for (;!(opcao == '6');)
+    for (;;)
     {
         printf("\n+--------------------------+");
         printf("\n|%*s%s%*s|", 11, "", "MENU", 11, "");
@@ -35,10 +35,15 @@ int main(int argc, char const *argv[])
             printf("\nOpcao 5");
         
         else if (opcao == '6')
+        {
             printf("\nSaindo...");
+            break;
+        }
         
         else
             printf("\nOpcao Invalida");
+
+        printf("\nCALCULO COMPLEXO");
     }
 
     
