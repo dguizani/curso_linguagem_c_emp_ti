@@ -4,7 +4,7 @@ int main(int argc, char const *argv[])
 {
     char opcao;
 
-    for (;;)
+    for (;!(opcao == '6');)
     {
         printf("\n+--------------------------+");
         printf("\n|%*s%s%*s|", 11, "", "MENU", 11, "");
@@ -20,30 +20,42 @@ int main(int argc, char const *argv[])
         scanf(" %c", &opcao);
 
         if (opcao == '1')
-            printf("\nOpcao 1");
-        
-        else if (opcao == '2')
-            printf("\nOpcao 2");
-        
-        else if (opcao == '3')
-            printf("\nOpcao 3");
-        
-        else if (opcao == '4')
-            printf("\nOpcao 4");
-        
-        else if (opcao == '5')
-            printf("\nOpcao 5");
-        
-        else if (opcao == '6')
         {
-            printf("\nSaindo...");
-            break;
+            printf("\nOpcao 1");
+            continue;
         }
         
-        else
-            printf("\nOpcao Invalida");
-
-        printf("\nCALCULO COMPLEXO");
+        if (opcao == '2')
+        {
+            printf("\nOpcao 2");
+            continue;
+        }
+        
+        if (opcao == '3')
+        {
+            printf("\nOpcao 3");
+            continue;
+        }
+        
+        if (opcao == '4')
+        {
+            printf("\nOpcao 4");
+            continue;
+        }
+        
+        if (opcao == '5')
+        {
+            printf("\nOpcao 5");
+            continue;
+        }
+        
+        if (opcao == '6')
+        {
+            printf("\nSaindo...");
+            continue;
+        }
+        
+        printf("\nOpcao Invalida");
     }
 
     
