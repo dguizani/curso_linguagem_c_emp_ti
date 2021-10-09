@@ -6,21 +6,19 @@ int main(int argc, char const *argv[])
 
     float media = 0;
 
-    int pos_nota = 0;
-    int num_nota = 1;
+    int pos_nota = 1;
 
     /*
         numero da nota   -> 1 2 3 4 5 ....
         posição do vetor -> 0 1 2 3 4 ....
     */
 
-    while (pos_nota != 5)
+    while (pos_nota != 6)
     {
-        printf("Digite a nota %d: ", num_nota);
-        scanf("%f", &notas[pos_nota]);
+        printf("Digite a nota %d: ", pos_nota);
+        scanf("%f", &notas[pos_nota - 1]);
 
         pos_nota += 1;
-        num_nota += 1;
     }
 
     // 5 7 4 2 1
