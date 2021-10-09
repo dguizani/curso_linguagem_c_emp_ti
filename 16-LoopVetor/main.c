@@ -4,20 +4,36 @@ int main(int argc, char const *argv[])
 {
     float notas[5];
 
-    printf("Digite a nota 1: ");
-    scanf("%f", &notas[0]);
+    float media = 0;
 
-    printf("Digite a nota 2: ");
-    scanf("%f", &notas[1]);
+    int pos_nota = 0;
+    int num_nota = 1;
 
-    printf("Digite a nota 3: ");
-    scanf("%f", &notas[2]);
+    /*
+        numero da nota   -> 1 2 3 4 5 ....
+        posição do vetor -> 0 1 2 3 4 ....
+    */
 
-    printf("Digite a nota 4: ");
-    scanf("%f", &notas[3]);
+    while (pos_nota != 5)
+    {
+        printf("Digite a nota %d: ", num_nota);
+        scanf("%f", &notas[pos_nota]);
 
-    printf("Digite a nota 5: ");
-    scanf("%f", &notas[4]);
+        pos_nota += 1;
+        num_nota += 1;
+    }
+
+    // 5 7 4 2 1
+
+    for (pos_nota = 0; pos_nota != 5; pos_nota += 1)
+        media += notas[pos_nota];
+
+    media /= 5;
+
+    for (pos_nota = 0; pos_nota != 5; pos_nota += 1)
+        printf("%f ", notas[pos_nota]);
+    
+    printf("\na media das notas eh %.2f", media);
 
     return 0;
 }
