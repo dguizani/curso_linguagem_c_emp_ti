@@ -44,6 +44,8 @@ int main(int argc, char const *argv[])
             coluna += 1;
         }
 
+        printf("\n");
+
         coluna = 0;
         linha += 1;
     }
@@ -51,8 +53,12 @@ int main(int argc, char const *argv[])
     printf("\n\n");
 
     for (linha = 0; linha != NUM_LINHAS; linha += 1)
+    {
         for (coluna = 0; coluna != NUM_COLUNAS; coluna += 1)
             printf("%c ", matriz[linha][coluna]);
+        
+        printf("\n");
+    }
 
     return 0;
 }
