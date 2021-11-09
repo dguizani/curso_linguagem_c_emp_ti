@@ -16,6 +16,9 @@ int main(int argc, char const *argv[])
     int coluna;
 
     int posicao;
+    int aux_posicao;
+
+    int jogada_valida;
 
     int cont_jogadas = 0;
 
@@ -24,15 +27,6 @@ int main(int argc, char const *argv[])
     char jogador_atual = JOGADOR_X;
 
     char ganhador = EMPATE;
-
-    /*
-            [0]   [1]   [2]
-        [0]  1  |  2  |  3
-            ----+-----+----
-        [1]  4  |  5  |  6   X
-            ----+-----+----
-        [2]  7  |  8  |  9   O
-    */
 
     char tabuleiro[QTD_LINHAS][QTD_COLUNAS];
 
@@ -62,41 +56,31 @@ int main(int argc, char const *argv[])
             continue;
         }
 
-        if (posicao >= 1 && posicao <= 3)
-        {
-            if (tabuleiro[0][posicao - 1] != CARACTERE_BRANCO)
-            {
-                printf("\nEssa posicao ja foi preenchida, digite novamente.\n");
+        aux_posicao = 1;
+        jogada_valida = 1;
 
-                continue;
+        for (linha = 0; linha < QTD_LINHAS; linha += 1)
+        {
+            if (posicao >= aux_posicao && posicao <= aux_posicao + QTD_COLUNAS - 1)
+            {
+                if (tabuleiro[linha][posicao - aux_posicao] == CARACTERE_BRANCO)
+                    tabuleiro[linha][posicao - aux_posicao] = jogador_atual;
+
+                else
+                {
+                    printf("\nEssa posicao ja foi preenchida, digite novamente.\n");
+
+                    jogada_valida = 0;
+                }
+                
+                break;
             }
 
-            tabuleiro[0][posicao - 1] = jogador_atual;
+            aux_posicao += QTD_COLUNAS;
         }
 
-        else if (posicao >= 4 && posicao <= 6)
-        {
-            if (tabuleiro[1][posicao - 4] != CARACTERE_BRANCO)
-            {
-                printf("\nEssa posicao ja foi preenchida, digite novamente.\n");
-
-                continue;
-            }
-
-            tabuleiro[1][posicao - 4] = jogador_atual;
-        }
-
-        else if (posicao >= 7 && posicao <= 9)
-        {
-            if (tabuleiro[2][posicao - 7] != CARACTERE_BRANCO)
-            {
-                printf("\nEssa posicao ja foi preenchida, digite novamente.\n");
-
-                continue;
-            }
-
-            tabuleiro[2][posicao - 7] = jogador_atual;
-        }
+        if (!jogada_valida)
+            continue;
 
         for (linha = 0; linha < QTD_LINHAS; linha += 1)
         {
@@ -104,8 +88,10 @@ int main(int argc, char const *argv[])
 
             for (coluna = 1; coluna < QTD_COLUNAS; coluna += 1)
             {
-                if (tabuleiro[linha][coluna] == CARACTERE_BRANCO || tabuleiro[linha][coluna] != tabuleiro[linha][coluna - 1])
-                {
+                if (
+                    tabuleiro[linha][coluna] == CARACTERE_BRANCO
+                    || tabuleiro[linha][coluna] != tabuleiro[linha][coluna - 1]
+                ) {
                     ganhador = EMPATE;
 
                     break;
@@ -124,8 +110,10 @@ int main(int argc, char const *argv[])
 
                 for (linha = 1; linha < QTD_LINHAS; linha += 1)
                 {
-                    if (tabuleiro[linha][coluna] == CARACTERE_BRANCO || tabuleiro[linha][coluna] != tabuleiro[linha - 1][coluna])
-                    {
+                    if (
+                        tabuleiro[linha][coluna] == CARACTERE_BRANCO
+                        || tabuleiro[linha][coluna] != tabuleiro[linha - 1][coluna]
+                    ) {
                         ganhador = EMPATE;
 
                         break;
@@ -143,8 +131,10 @@ int main(int argc, char const *argv[])
 
             for (linha = 1; linha < QTD_LINHAS; linha += 1)
             {
-                if (tabuleiro[linha][linha] == CARACTERE_BRANCO || tabuleiro[linha][linha] != tabuleiro[linha - 1][linha - 1])
-                {
+                if (
+                    tabuleiro[linha][linha] == CARACTERE_BRANCO
+                    || tabuleiro[linha][linha] != tabuleiro[linha - 1][linha - 1]
+                ) {
                     ganhador = EMPATE;
 
                     break;
@@ -160,8 +150,10 @@ int main(int argc, char const *argv[])
 
             for (linha = 1; linha < QTD_LINHAS && coluna >= 0; linha += 1)
             {
-                if (tabuleiro[linha][coluna] == CARACTERE_BRANCO || tabuleiro[linha][coluna] != tabuleiro[linha - 1][coluna + 1])
-                {
+                if (
+                    tabuleiro[linha][coluna] == CARACTERE_BRANCO
+                    || tabuleiro[linha][coluna] != tabuleiro[linha - 1][coluna + 1]
+                ) {
                     ganhador = EMPATE;
 
                     break;
